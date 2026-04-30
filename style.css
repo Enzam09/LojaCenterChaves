@@ -1,0 +1,197 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* VARIÁVEIS (nível profissional) */
+:root {
+  --preto: #0d0d0d;
+  --laranja: #ff7a00;
+  --amarelo: #ffc300;
+  --vermelho: #e63946;
+  --branco: #f5f5f5;
+  --cinza: #1a1a1a;
+}
+
+/* BASE */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: var(--branco);
+  color: var(--preto);
+  line-height: 1.6;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADER */
+.header {
+  background: linear-gradient(90deg, var(--preto), var(--cinza));
+  color: white;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--laranja);
+  font-weight: bold;
+}
+
+/* NAV */
+.nav {
+  margin-top: 10px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: var(--laranja);
+  left: 0;
+  bottom: -5px;
+  transition: 0.3s;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+.nav a:hover {
+  color: var(--laranja);
+}
+
+/* REDES SOCIAIS */
+.social {
+  margin-top: 10px;
+}
+
+.social a {
+  color: white;
+  text-decoration: none;
+  margin-right: 15px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  transition: 0.3s;
+}
+
+.social a:hover {
+  color: var(--amarelo);
+}
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--laranja), var(--vermelho));
+  color: white;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.hero-title {
+  font-size: 2.8rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* SERVIÇOS */
+.servicos {
+  padding: 50px 0;
+  background: white;
+}
+
+.servicos h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--preto);
+}
+
+/* GRID */
+.grid-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.grid-servicos img {
+  width: 100%;
+  border-radius: 12px;
+  transition: 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.grid-servicos img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+/* SOBRE */
+.sobre {
+  background: linear-gradient(135deg, var(--preto), var(--cinza));
+  color: white;
+  padding: 60px 20px;
+}
+
+.sobre h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--amarelo);
+}
+
+.sobre p {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+/* BOTÃO (caso use depois) */
+.btn {
+  display: inline-block;
+  background: var(--laranja);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--vermelho);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+}
