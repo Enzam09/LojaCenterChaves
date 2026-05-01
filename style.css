@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* VARIÁVEIS (nível profissional) */
 :root {
   --preto: #0d0d0d;
@@ -137,6 +141,11 @@ body {
   gap: 20px;
 }
 
+.servico-card {
+  display: flex;
+  flex-direction: column;
+}
+
 .grid-servicos img {
   width: 100%;
   border-radius: 12px;
@@ -147,6 +156,18 @@ body {
 .grid-servicos img:hover {
   transform: scale(1.05);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+}
+
+.grid-servicos h2 {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--preto);
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
 /* SOBRE */
@@ -167,6 +188,7 @@ body {
   margin: auto;
   text-align: center;
   font-size: 1.1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /* BOTÃO (caso use depois) */
@@ -194,4 +216,71 @@ body {
   .hero-title {
     font-size: 2rem;
   }
+}
+
+.imageml {
+    display: flex;
+    justify-content: flex-end; /* joga pra direita */
+    align-items: flex-start;   /* joga pra cima */
+    padding: 10px;
+}
+
+.logo-img {
+    width: 130px; /* ajuste o tamanho conforme necessário */
+    height: auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: -120px; /* espaço entre a imagem e o texto */
+}
+
+.ftloja {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+    margin-top: 40px;
+}
+
+.ftloja:hover {
+    transform: scale(1.05);
+}
+
+.localizacao {
+    border-top: 2px solid var(--laranja);
+    padding-top: 30px;
+    margin-top: 30px;
+}
+
+.localizacao h2 {
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.localizacao h2:hover {
+    transform: scale(1.1);
+    color: var(--amarelo);
+}
+
+.endereco {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: var(--amarelo);
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.endereco:hover {
+    color: var(--vermelho);
 }
